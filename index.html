@@ -9,11 +9,21 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  <!-- ═══════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════════ -->
   <nav class="navbar">
     <a class="navbar-logo" href="#">
-      <i class="fa-solid fa-globe"></i> onfly
+      <svg class="logo-globe" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="14" stroke="#1a73e8" stroke-width="2"/>
+        <ellipse cx="16" cy="16" rx="6" ry="14" stroke="#1a73e8" stroke-width="2"/>
+        <line x1="2" y1="16" x2="30" y2="16" stroke="#1a73e8" stroke-width="2"/>
+        <path d="M5 9.5 Q16 12 27 9.5" stroke="#1a73e8" stroke-width="2" fill="none"/>
+        <path d="M5 22.5 Q16 20 27 22.5" stroke="#1a73e8" stroke-width="2" fill="none"/>
+      </svg>
+      <span>onfly</span>
     </a>
+
     <ul class="navbar-nav">
       <li>
         <a href="#" class="active">
@@ -22,24 +32,24 @@
       </li>
       <li>
         <a href="#">
-          <i class="fa-solid fa-plane"></i> Viagens
+          <i class="fa-solid fa-plane-departure"></i> Viagens
           <i class="fa-solid fa-chevron-down chevron-sm"></i>
         </a>
       </li>
       <li>
         <a href="#">
-          <i class="fa-solid fa-receipt"></i> Despesas
+          <i class="fa-solid fa-file-invoice-dollar"></i> Despesas
           <i class="fa-solid fa-chevron-down chevron-sm"></i>
         </a>
       </li>
       <li>
         <a href="#">
-          <i class="fa-solid fa-check-circle"></i> Aprovações
+          <i class="fa-regular fa-square-check"></i> Aprovações
         </a>
       </li>
       <li>
         <a href="#">
-          <i class="fa-solid fa-chart-pie"></i> Gestão
+          <i class="fa-solid fa-chart-column"></i> Gestão
           <i class="fa-solid fa-chevron-down chevron-sm"></i>
         </a>
       </li>
@@ -50,12 +60,15 @@
         </a>
       </li>
     </ul>
+
     <div class="navbar-right">
-      <a href="#">
+      <a href="#" class="nav-help">
         <i class="fa-regular fa-circle-question"></i> Ajuda
       </a>
       <div class="notif-wrap">
-        <a href="#"><i class="fa-solid fa-rocket"></i></a>
+        <a href="#" class="notif-link">
+          <i class="fa-solid fa-rocket"></i>
+        </a>
         <span class="notif-badge">1</span>
       </div>
       <div class="avatar">
@@ -64,17 +77,27 @@
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════ -->
   <section class="hero">
     <div class="hero-left">
       <div class="hero-plane">
-        <i class="fa-solid fa-plane"></i>
+        <!-- Airplane SVG illustration -->
+        <svg viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 50 L55 20 L75 30 L45 45 Z" fill="#1a73e8" opacity="0.9"/>
+          <path d="M45 45 L75 30 L80 50 L55 55 Z" fill="#1565c0" opacity="0.85"/>
+          <path d="M10 50 L45 45 L40 65 L20 60 Z" fill="#1976d2" opacity="0.8"/>
+          <path d="M55 20 L70 15 L75 30 Z" fill="#42a5f5"/>
+          <path d="M40 65 L50 70 L55 55 Z" fill="#42a5f5"/>
+        </svg>
       </div>
       <div class="hero-text">
         <h1>Olá, Matheus , tudo bem?</h1>
         <p>Já deixamos tudo pronto, veja abaixo seu resumo.</p>
       </div>
     </div>
+
     <div class="hero-actions">
       <a href="#" class="hero-btn">
         <i class="fa-solid fa-ticket"></i>
@@ -89,124 +112,166 @@
         <span>Relatórios</span>
       </a>
     </div>
+
+    <!-- Cloud decoration -->
+    <div class="hero-clouds" aria-hidden="true">
+      <svg viewBox="0 0 500 180" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <ellipse cx="420" cy="55"  rx="160" ry="48" fill="white" opacity="0.45"/>
+        <ellipse cx="290" cy="120" rx="200" ry="44" fill="white" opacity="0.3"/>
+        <ellipse cx="470" cy="145" rx="110" ry="32" fill="white" opacity="0.25"/>
+        <ellipse cx="160" cy="80"  rx="130" ry="36" fill="white" opacity="0.2"/>
+      </svg>
+    </div>
   </section>
 
-  <!-- MAIN -->
+  <!-- ═══════════════════════════════════════════
+       MAIN
+  ════════════════════════════════════════════ -->
   <div class="main">
 
-    <!-- MENU LIST -->
-    <div class="menu-list">
+    <!-- ── LEFT COLUMN ── -->
+    <div class="left-col">
 
-      <a href="#" class="menu-item">
-        <div class="menu-icon"><i class="fa-solid fa-shield-heart"></i></div>
-        <div class="menu-info">
-          <strong>Duty of Care</strong>
-          <span>Gerencie o cuidado e segurança dos viajantes</span>
-        </div>
-        <i class="fa-solid fa-chevron-right menu-arrow"></i>
-      </a>
+      <!-- Menu items -->
+      <div class="menu-list">
 
-      <a href="#" class="menu-item">
-        <div class="menu-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
-        <div class="menu-info">
-          <strong>Lazer by OnHappy</strong>
-          <span>As melhores opções para sua viagem a lazer</span>
-        </div>
-        <i class="fa-solid fa-chevron-right menu-arrow"></i>
-      </a>
+        <a href="#" class="menu-item">
+          <div class="menu-icon">
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <div class="menu-info">
+            <strong>Duty of Care</strong>
+            <span>Gerencie o cuidado e segurança dos viajantes</span>
+          </div>
+          <i class="fa-solid fa-chevron-right menu-arrow"></i>
+        </a>
 
-      <a href="#" class="menu-item">
-        <div class="menu-icon"><i class="fa-solid fa-table-columns"></i></div>
-        <div class="menu-info">
-          <strong>Dashboard</strong>
-          <span>Deixe pronto alguns números importantes.</span>
-        </div>
-        <i class="fa-solid fa-chevron-right menu-arrow"></i>
-      </a>
+        <a href="#" class="menu-item">
+          <div class="menu-icon">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="menu-info">
+            <strong>Lazer by OnHappy</strong>
+            <span>As melhores opções para sua viagem a lazer</span>
+          </div>
+          <i class="fa-solid fa-chevron-right menu-arrow"></i>
+        </a>
 
-      <a href="#" class="menu-item">
-        <div class="menu-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
-        <div class="menu-info">
-          <strong>Solicitar Adiantamento</strong>
-          <span>Crie uma solicitação de adiantamento.</span>
-        </div>
-        <i class="fa-solid fa-chevron-right menu-arrow"></i>
-      </a>
+        <a href="#" class="menu-item">
+          <div class="menu-icon">
+            <i class="fa-solid fa-table-cells-large"></i>
+          </div>
+          <div class="menu-info">
+            <strong>Dashboard</strong>
+            <span>Deixe pronto alguns números importantes.</span>
+          </div>
+          <i class="fa-solid fa-chevron-right menu-arrow"></i>
+        </a>
 
-      <a href="#" class="menu-item">
-        <div class="menu-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-        <div class="menu-info">
-          <strong>Criar despesa</strong>
-          <span>Crie uma despesa quando precisar.</span>
-        </div>
-        <i class="fa-solid fa-chevron-right menu-arrow"></i>
-      </a>
+        <a href="#" class="menu-item">
+          <div class="menu-icon">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+          </div>
+          <div class="menu-info">
+            <strong>Solicitar Adiantamento</strong>
+            <span>Crie uma solicitação de adiantamento.</span>
+          </div>
+          <i class="fa-solid fa-chevron-right menu-arrow"></i>
+        </a>
 
-      <a href="#" class="menu-item">
-        <div class="menu-icon"><i class="fa-solid fa-chart-line"></i></div>
-        <div class="menu-info">
-          <strong>Criar relatório</strong>
-          <span>Crie relatórios rapidamente e envie para aprovação.</span>
-        </div>
-        <i class="fa-solid fa-chevron-right menu-arrow"></i>
-      </a>
+        <a href="#" class="menu-item">
+          <div class="menu-icon">
+            <i class="fa-solid fa-receipt"></i>
+          </div>
+          <div class="menu-info">
+            <strong>Criar despesa</strong>
+            <span>Crie uma despesa quando precisar.</span>
+          </div>
+          <i class="fa-solid fa-chevron-right menu-arrow"></i>
+        </a>
 
-      <a href="#" class="menu-item">
-        <div class="menu-icon"><i class="fa-solid fa-list-check"></i></div>
-        <div class="menu-info">
-          <strong>Minhas requisições</strong>
-          <span>Precisa reservar ou alterar algo?</span>
-        </div>
-        <i class="fa-solid fa-chevron-right menu-arrow"></i>
-      </a>
+        <a href="#" class="menu-item">
+          <div class="menu-icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <div class="menu-info">
+            <strong>Criar relatório</strong>
+            <span>Crie relatórios rapidamente e envie para aprovação.</span>
+          </div>
+          <i class="fa-solid fa-chevron-right menu-arrow"></i>
+        </a>
 
-      <!-- BANNER -->
+        <a href="#" class="menu-item">
+          <div class="menu-icon">
+            <i class="fa-solid fa-plane-circle-check"></i>
+          </div>
+          <div class="menu-info">
+            <strong>Minhas requisições</strong>
+            <span>Precisa reservar ou alterar algo?</span>
+          </div>
+          <i class="fa-solid fa-chevron-right menu-arrow"></i>
+        </a>
+
+      </div>
+
+      <!-- onhappy Banner -->
       <div class="banner">
-        <div class="banner-text">
+        <div class="banner-content">
           <div class="banner-badge"><span>on</span>happy</div>
           <h3>Explore a nova<br />plataforma</h3>
         </div>
-        <i class="fa-solid fa-people-group banner-img"></i>
+        <div class="banner-visual" aria-hidden="true">
+          <i class="fa-solid fa-people-group"></i>
+        </div>
       </div>
 
     </div>
 
-    <!-- AZULZINHO -->
+    <!-- ── RIGHT COLUMN: Meu Azulzinho ── -->
     <div class="azulzinho-section">
+
       <div class="section-header">
-        <h2><i class="fa-solid fa-credit-card"></i> Meu Azulzinho</h2>
-        <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+        <h2>
+          <i class="fa-solid fa-credit-card"></i>
+          Meu Azulzinho
+        </h2>
+        <a href="#" class="section-link">
+          <i class="fa-solid fa-chevron-right"></i>
+        </a>
       </div>
 
       <!-- Virtual Card -->
       <div class="virtual-card">
-        <div class="card-top">
-          <span class="label">Virtual</span>
-          <span class="brand">onfly <i class="fa-solid fa-sim-card"></i></span>
+        <div class="card-row card-top-row">
+          <span class="card-label">Virtual</span>
+          <span class="card-brand">
+            onfly
+            <i class="fa-solid fa-sim-card"></i>
+          </span>
         </div>
-        <div class="card-middle">
-          <i class="fa-solid fa-lock"></i>
+        <div class="card-row card-mid-row">
+          <i class="fa-solid fa-lock card-lock"></i>
           <div class="card-balance">
             <i class="fa-regular fa-eye-slash"></i>
             <span>R$ ••••</span>
           </div>
         </div>
-        <div class="card-bottom">
+        <div class="card-row card-bot-row">
           <span class="card-number">•••• 9021</span>
           <div class="mastercard-logo">
-            <div class="mc-circle red"></div>
-            <div class="mc-circle orange"></div>
+            <div class="mc-circle mc-red"></div>
+            <div class="mc-circle mc-orange"></div>
           </div>
         </div>
       </div>
 
-      <!-- Transactions -->
+      <!-- Transaction List -->
       <div class="transactions">
 
         <div class="tx-item">
           <div class="tx-info">
-            <div class="tx-name">Uber *UBER *TRIP</div>
-            <div class="tx-date">16/03/2024</div>
+            <span class="tx-name">Uber *UBER *TRIP</span>
+            <span class="tx-date">16/03/2024</span>
           </div>
           <div class="tx-right">
             <span class="tx-amount">R$ 7,18</span>
@@ -215,8 +280,8 @@
 
         <div class="tx-item">
           <div class="tx-info">
-            <div class="tx-name">Uber *UBER *TRIP</div>
-            <div class="tx-date">23/02/2024</div>
+            <span class="tx-name">Uber *UBER *TRIP</span>
+            <span class="tx-date">23/02/2024</span>
           </div>
           <div class="tx-right">
             <span class="tx-amount">R$ 13,99</span>
@@ -225,8 +290,8 @@
 
         <div class="tx-item">
           <div class="tx-info">
-            <div class="tx-name">Uber *UBER *TRIP</div>
-            <div class="tx-date">23/02/2024</div>
+            <span class="tx-name">Uber *UBER *TRIP</span>
+            <span class="tx-date">23/02/2024</span>
           </div>
           <div class="tx-right">
             <span class="tx-amount negative">R$ -14,36</span>
@@ -236,8 +301,8 @@
 
         <div class="tx-item">
           <div class="tx-info">
-            <div class="tx-name">Uber *UBER *TRIP</div>
-            <div class="tx-date">23/02/2024</div>
+            <span class="tx-name">Uber *UBER *TRIP</span>
+            <span class="tx-date">23/02/2024</span>
           </div>
           <div class="tx-right">
             <span class="tx-amount negative">R$ -13,99</span>
@@ -246,8 +311,8 @@
 
         <div class="tx-item">
           <div class="tx-info">
-            <div class="tx-name">Uber *UBER *TRIP</div>
-            <div class="tx-date">19/02/2024</div>
+            <span class="tx-name">Uber *UBER *TRIP</span>
+            <span class="tx-date">19/02/2024</span>
           </div>
           <div class="tx-right">
             <span class="tx-amount negative">R$ -11,93</span>
@@ -260,10 +325,10 @@
 
   </div>
 
-  <!-- CHAT BUBBLE -->
-  <div class="chat-bubble">
+  <!-- ── CHAT BUBBLE ── -->
+  <button class="chat-bubble" aria-label="Abrir chat">
     <i class="fa-regular fa-comment-dots"></i>
-  </div>
+  </button>
 
 </body>
 </html>
